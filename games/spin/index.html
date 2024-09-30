@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin the Wheel - Constitutional Battles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Spin the Wheel: Constitutional Battles</h1>
+
+        <!-- Wheel container -->
+        <div class="wheel-container">
+            <canvas id="wheel" width="400" height="400"></canvas>
+            <button id="spinButton" onclick="spinWheel()">Spin the Wheel</button>
+        </div>
+
+        <!-- Display result -->
+        <div class="result-box">
+            <h2 id="resultTitle">Constitutional Challenge:</h2>
+            <p id="resultText">Spin the wheel to begin!</p>
+            <button id="answerButton" class="hidden" onclick="answerQuestion()">Answer the Question</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

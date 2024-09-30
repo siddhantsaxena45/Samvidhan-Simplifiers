@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitution Simplifier Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: rgb(85, 85, 85);
+            font-family: 'Arial', sans-serif;
+        }
+
+
+        .login-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            width: 200px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 10px;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #fff;
+            outline: none;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .input-box label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            pointer-events: none;
+            transition: 0.5s;
+        }
+
+        .input-box input:focus~label,
+        .input-box input:valid~label {
+            top: -20px;
+            left: 10px;
+            color: #fff;
+            font-size: 12px;
+        }
+
+        .hi {
+            width: 100%;
+            background: #fff;
+            border: none;
+            padding: 10px;
+            color: #303030;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hi:hover {
+            background: #3c3d3f;
+            color: #fff;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            display: none;
+        }
+
+        .log {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+            width: 80vw;
+            margin-top: 10px;
+        }
+
+        .login-container {
+            position: relative;
+            left: 600px;
+            z-index: 10;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <button class="hamburger" id="hamburger">☰</button>
+        <a href="index.html">Home</a>
+        <a href="#">Profile</a>
+        <a href="#">Contact</a>
+
+    </div>
+
+    <div class="sidebar" id="sidebar">
+
+        <button class="close-btn" id="close-sidebar">×</button>
+        <a href="index2.html">Voice game</a>
+        <a href="#">Card Game</a>
+        <a href="#">Monopoly</a>
+    </div>
+    <div class="log">
+        <div class="login-container">
+            <div class="login-box">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <div class="input-box">
+                        <input type="text" id="username" required>
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="password" required>
+                        <label for="password">Password</label>
+                    </div>
+                    <button class="hi" type="submit">Login</button>
+                    <p class="error-message" id="errorMessage"></p>
+                </form>
+            </div>
+        </div>
+        <video class="vid" src="book.mp4" autoplay muted></video>
+    </div>
+    <script>document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            if (username === 'user' && password === 'password') {
+                alert('Login successful!');
+                errorMessage.style.display = 'none';
+            } else {
+                errorMessage.textContent = 'Invalid username or password';
+                errorMessage.style.display = 'block';
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

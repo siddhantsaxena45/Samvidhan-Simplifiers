@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitutional Battles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Constitutional Battles</h1>
+        <p>Select your role to begin:</p>
+        <div class="roles">
+            <button class="role-btn" onclick="selectRole('Executive')">Executive</button>
+            <button class="role-btn" onclick="selectRole('Legislature')">Legislature</button>
+            <button class="role-btn" onclick="selectRole('Judiciary')">Judiciary</button>
+        </div>
+
+        <div class="scenario-box" id="scenarioBox">
+            <h2 id="roleSelected"></h2>
+            <p id="scenarioText">Press a button to select your role and face your first challenge!</p>
+        </div>
+
+        <div class="battle-actions">
+            <button class="action-btn" onclick="battleAction('Agree')">Agree</button>
+            <button class="action-btn" onclick="battleAction('Disagree')">Disagree</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

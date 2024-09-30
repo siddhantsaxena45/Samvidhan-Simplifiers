@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Knowledge Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="popup">
+        <p>YOU WIN! MOVE AHEAD CHAMP</p>
+        <button onclick="document.getElementById('popup').style.display='none'">Close</button>
+    </div>
+    
+    
+    <nav>
+        <h1>Government Knowledge Quiz</h1>
+    </nav>
+    <div id="container">
+        <aside id="sideboard">
+            <h2>Select a Question</h2>
+            <form id="quizForm">
+                <!-- List of 10 Questions -->
+                <div class="question">
+                    <label for="que1">Que1: Which branch of government is primarily responsible for drafting and passing legislation?</label>
+                    <select name="que1" id="que1" onchange="handleSelection('que1')">
+                        <option value="">Select...</option>
+                        <option value="legislative">Legislative</option>
+                        <option value="executive">Executive</option>
+                        <option value="judiciary">Judiciary</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label for="que2"> Que 2: What branch of government is headed by the President in the United States and is responsible for enforcing the laws?</label>
+                    <select name="que2" id="que2" onchange="handleSelection('que2')">
+                        <option value="">Select...</option>
+                        <option value="legislative">Legislative</option>
+                        <option value="executive">Executive</option>
+                        <option value="judiciary">Judiciary</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label for="que3">Que3: Which branch of government interprets laws and ensures they are applied fairly and justly?</label>
+                    <select name="que3" id="que3" onchange="handleSelection('que3')">
+                        <option value="">Select...</option>
+                        <option value="legislative">Legislative</option>
+                        <option value="executive">Executive</option>
+                        <option value="judiciary">Judiciary</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label for="que4">Que4: What is the name of the branch of government that has the authority to create and amend laws and is typically composed of elected representatives?</label>
+                    <select name="que4" id="que4" onchange="handleSelection('que4')">
+                        <option value="">Select...</option>
+                        <option value="legislative">Legislative</option>
+                        <option value="executive">Executive</option>
+                        <option value="judiciary">Judiciary</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label for="que5">Que5: Which branch of government includes agencies such as the Department of Justice and the Department of Defense, responsible for implementing laws?</label>
+                    <select name="que5" id="que5" onchange="handleSelection('que5')">
+                        <option value="">Select...</option>
+                        <option value="legislative">Legislative</option>
+                        <option value="executive">Executive</option>
+                        <option value="judiciary">Judiciary</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label for="que6">Que6: What branch of government includes the Supreme Court and lower courts, and is responsible for resolving disputes based on the law?</label>
+                    <select name="que6" id="que6" onchange="handleSelection('que6')">
+                        <option value="">Select...</option>
+                        <option value="legislative">Legislative</option>
+                        <option value="executive">Executive</option>
+                        <option value="judiciary">Judiciary</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label for="que7">Que7: Which branch of government is responsible for formulating and enacting laws and is made up of bodies such as the Senate and the House of Representatives?</label>
+                    <select name="que7" id="que7" onchange="handleSelection('que7')">
+                        <option value="">Select...</option>
+                        <option value="legislative">Legislative</option>
+                        <option value="executive">Executive</option>
+                        <option value="judiciary">Judiciary</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label for="que8">Que8: What branch of government is responsible for executing the laws passed by the legislative branch and includes the President, Vice President, and the Cabinet?</label>
+                    <select name="que8" id="que8" onchange="handleSelection('que8')">
+                        <option value="">Select...</option>
+                        <option value="legislative">Legislative</option>
+                        <option value="executive">Executive</option>
+                        <option value="judiciary">Judiciary</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label for="que9">Que9: Which branch of government has the role of reviewing and interpreting the constitutionality of laws and ensuring they comply with constitutional principles?</label>
+                    <select name="que9" id="que9" onchange="handleSelection('que9')">
+                        <option value="">Select...</option>
+                        <option value="legislative">Legislative</option>
+                        <option value="executive">Executive</option>
+                        <option value="judiciary">Judiciary</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label for="que10">Que10: What branch of government involves lawmakers who debate, draft, and pass legislation, such as the House of Commons in the UK or Congress in the US?</label>
+                    <select name="que10" id="que10" onchange="handleSelection('que10')">
+                        <option value="">Select...</option>
+                        <option value="legislative">Legislative</option>
+                        <option value="executive">Executive</option>
+                        <option value="judiciary">Judiciary</option>
+                    </select>
+                </div>
+
+                <button type="submit" onclick="handleSubmit()">Submit Answers</button>
+            </form>
+        </aside>
+        <main id="content">
+            <h2>Instructions</h2>
+            <p>Select the correct branch of government for each question. Once you've made all your selections, submit your answers to see how well you did!</p>
+            <div id="feedback"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

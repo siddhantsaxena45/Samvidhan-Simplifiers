@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #34495e;
+}
+
+.roles {
+    margin: 20px 0;
+}
+
+.role-btn {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.role-btn:hover {
+    background-color: #1abc9c;
+}
+
+.scenario-box {
+    background: #ecf0f1;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+.battle-actions {
+    margin-top: 20px;
+}
+
+.action-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #c0392b;
+}
